@@ -1,0 +1,28 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.mongodb', name: 'mongodb-driver', version: '3.6.3'
+    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
+    compile 'com.jfoenix:jfoenix:9.0.10'
+    compile group: 'com.opencsv', name: 'opencsv', version: '4.1'
+    implementation 'mysql:mysql-connector-java:8.0.15'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.6'
+
+}
+
+javafx {
+    version = "13"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+mainClassName = 'App'
